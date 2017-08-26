@@ -7,7 +7,10 @@ var db = require('../db.js');
 
 router.get('/', function(req, res, next) {
   db.getRecords(records => {
-    res.render('index.ejs', {records: records});
+    if(records === undefined)
+      res.json({success: false, msg: 'records is undefined.'});
+    else
+      res.render('index.ejs', {records: records});
   });
 });
 
