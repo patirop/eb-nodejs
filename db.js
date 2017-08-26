@@ -9,10 +9,10 @@ var connection = mysql.createConnection({
 
 connection.connect((err) => {
   if(!err) {
-    console.log('Host Database Connection Succcess.');
+    console.log({success:false, msg:'Host Database Connection Succcess.', err:err});
   }
   else {
-    console.log('Connection Failed.');
+    console.log({success:false, msg:'Connection Failed.', err:err});
   }
 });
 
