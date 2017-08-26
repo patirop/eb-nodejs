@@ -1,0 +1,16 @@
+<table style="text-align: middle; widht:100%; border-spacing: 5px; border: 1px solid black; border-collapse: collapse;">
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Nickname</th>
+    <th>Image</th>
+  </tr>
+  <% for (var i = 0 ; i < records.length ; i++) { %>
+  <tr>
+    <th><%= records[i].firstname %></th>
+    <th><%= records[i].lastname %></th>
+    <th><%= records[i].nickname %></th>
+    <th> <img src="<%= records[i].image %>" alt="" width="150px" height="150px"></th>
+  </tr>
+  <% } %>
+</table>
