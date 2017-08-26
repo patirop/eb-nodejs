@@ -3,7 +3,7 @@ branch-defaults:
     environment: NodejsApp
     group_suffix: null
   master:
-    environment: NodejsApp
+    environment: eb-nodejs-env
 global:
   application_name: os2-nodejs
   branch: null
