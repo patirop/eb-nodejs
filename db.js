@@ -4,15 +4,26 @@ var connection = mysql.createConnection({
   port     : 3306,
   user     : 'username',
   password : 'wutpassword',
-  database : 'nodejsdb'
+  database : 'nodejsdb',
+  timeout: 60000
 });
 
 connection.connect((err) => {
   if(!err) {
-    console.log({success:false, msg:'Host Database Connection Succcess.', err:err});
+    console.log({
+      tag: "db connection",
+      success: true,
+      msg: 'Host Database Connection Succcess.',
+      err: err
+    });
   }
   else {
-    console.log({success:false, msg:'Connection Failed.', err:err});
+    console.log({
+      tag: "db connection",
+      success: false,
+      msg: 'Host Database Connection Failed.',
+      err: err
+    });
   }
 });
 
@@ -21,7 +32,6 @@ exports.getRecords = (callback) => {
     if(err) {
       console.log('query err');
     }
-    // console.log(fields);
     callback(results);
   });
 }
