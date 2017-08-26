@@ -2,6 +2,8 @@ branch-defaults:
   default:
     environment: NodejsApp
     group_suffix: null
+  master:
+    environment: NodejsApp
 global:
   application_name: os2-nodejs
   branch: null
